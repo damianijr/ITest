@@ -1,0 +1,161 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ITest ",
+		"_postman_id": "a5d8835b-6788-049a-9538-740a5f1b40f4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All restaurants",
+			"request": {
+				"url": "http://localhost:8080/restaurants/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "All restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "Find restaurants by cep",
+			"request": {
+				"url": "http://localhost:8080/restaurants",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "All restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "Delivery area",
+			"request": {
+				"url": "http://localhost:8080/restaurants/1/delivery",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cep\": \"14800900\"\n}"
+				},
+				"description": "All restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "New restaurant",
+			"request": {
+				"url": "http://localhost:8080/restaurants/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurante 1\",\n\t\"address\": \"Av. Miguel Couto, 555, Araraquara-SP\",\n\t\"cnpj\": \"1013232123213\",\n\t\"phone\": \"213-91239-12\"\n\t\n}"
+				},
+				"description": "All restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "New restaurant thread safe",
+			"request": {
+				"url": "http://localhost:8080/restaurants/sync/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurante 2\",\n\t\"address\": \"Av. Miguel Couto, 555, Araraquara-SP\",\n\t\"cnpj\": \"1013232123213\",\n\t\"phone\": \"213-91239-12\"\n\t\n}"
+				},
+				"description": "All restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "New restaurant distributed env",
+			"request": {
+				"url": "http://localhost:8080/restaurants/syncDistributed",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurante 4\",\n\t\"address\": \"Av. Miguel Couto, 555, Araraquara-SP\",\n\t\"cnpj\": \"1013232123213\",\n\t\"phone\": \"213-91239-12\"\n\t\n}"
+				},
+				"description": "All restaurants"
+			},
+			"response": []
+		}
+	]
+}
